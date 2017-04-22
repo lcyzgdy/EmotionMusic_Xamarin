@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:background="#f7f7f7f7">
+    <RelativeLayout
+        p1:orientation="horizontal"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/SettingFragment_UserAccount"
+        p1:gravity="left"
+        p1:layout_alignParentTop="true"
+        p1:layout_marginTop="5dp"
+        p1:layout_marginLeft="10dp"
+        p1:layout_marginRight="10dp"
+        p1:background="@drawable/itemasbutton"
+        p1:clickable="true">
+        <ImageView
+            p1:src="@drawable/defaultuser"
+            p1:id="@+id/SettingFragment_UserImage"
+            p1:layout_height="60dp"
+            p1:layout_width="60dp"
+            p1:layout_marginLeft="20dp"
+            p1:layout_marginBottom="0"
+            p1:layout_marginTop="10dp"
+            p1:layout_alignParentTop="true"
+            p1:layout_alignParentStart="true" />
+        <TextView
+            p1:text="13xxxxxxxxx"
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/SettingFragment_Username"
+            p1:layout_toRightOf="@id/SettingFragment_UserImage"
+            p1:layout_marginLeft="80dp"
+            p1:layout_centerInParent="true"
+            p1:textColor="@android:color/background_dark"
+            p1:layout_marginTop="20dp" />
+    </RelativeLayout>
+    <Button
+        p1:text="@string/Logout"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/SettingFragment_LogoutButton"
+        p1:textColor="@android:color/holo_red_dark"
+        p1:textStyle="bold"
+        p1:layout_below="@id/SettingFragment_UserAccount"
+        p1:theme="@android:style/Holo.Light.ButtonBar"
+        p1:background="@drawable/button1"
+        p1:layout_marginTop="20dp"
+        p1:layout_alignLeft="@id/SettingFragment_UserAccount"
+        p1:layout_alignRight="@id/SettingFragment_UserAccount" />
+</RelativeLayout>

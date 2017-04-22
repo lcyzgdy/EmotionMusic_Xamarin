@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="ApplicationName">EmotionMusic</string>
+  <string name="SkinColor">LightBlue</string>
+  <string name="Username">请输入手机号</string>
+  <string name="Password">请输入密码</string>
+  <string name="Login">登录</string>
+  <string name="LoginFailed">登录失败</string>
+  <string name="Logout">退出登录</string>
+</resources>

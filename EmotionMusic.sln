@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.25928.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmotionMusic", "EmotionMusic\EmotionMusic.csproj", "{CC23F683-6B7D-4262-802F-ED92B0622D29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.ProjectOxford.Emotion", "Microsoft.ProjectOxford.Emotion\Microsoft.ProjectOxford.Emotion.csproj", "{38BDBC63-3592-4C95-9EDC-C427378E15B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.ProjectOxford.Common", "Microsoft.ProjectOxford.Common\Microsoft.ProjectOxford.Common.csproj", "{DA622494-277B-4A32-B5E5-E5736945B41D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC23F683-6B7D-4262-802F-ED92B0622D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC23F683-6B7D-4262-802F-ED92B0622D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC23F683-6B7D-4262-802F-ED92B0622D29}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CC23F683-6B7D-4262-802F-ED92B0622D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC23F683-6B7D-4262-802F-ED92B0622D29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC23F683-6B7D-4262-802F-ED92B0622D29}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{38BDBC63-3592-4C95-9EDC-C427378E15B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38BDBC63-3592-4C95-9EDC-C427378E15B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38BDBC63-3592-4C95-9EDC-C427378E15B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38BDBC63-3592-4C95-9EDC-C427378E15B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA622494-277B-4A32-B5E5-E5736945B41D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA622494-277B-4A32-B5E5-E5736945B41D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA622494-277B-4A32-B5E5-E5736945B41D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA622494-277B-4A32-B5E5-E5736945B41D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

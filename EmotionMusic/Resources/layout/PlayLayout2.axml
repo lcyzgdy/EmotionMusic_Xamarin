@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
+    android:gravity="top"
+    style="@android:style/Theme.DeviceDefault.Light.NoActionBar"
+    android:background="@android:color/background_light">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/PlayLayout2_PlayBackground"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:background="@drawable/back12">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="48.0dp"
+            android:id="@+id/PlayLayout2_Top"
+            android:background="#a0ffffff">
+            <ImageButton
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/PlayLayout2_Top_BackButton"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="12.0dp" />
+            <TextView
+                android:text="EmotionMusic"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/PlayLayout2_Top_Text"
+                android:textColor="@android:color/background_dark"
+                android:gravity="center"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/onpu2"
+            android:layout_width="match_parent"
+            android:layout_height="330.0dp"
+            android:id="@+id/PlayLayout2_Image"
+            android:background="#a0ffffff" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PlayLayout2_LrcBackground"
+            android:background="#a0ffffff">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="180.0dp"
+                android:id="@+id/PlayLayout2_LrcText"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="40.0dp"
+                android:layout_marginRight="40.0dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/PlayLayout2_Foot"
+            android:background="#a0ffffff"
+            android:layout_gravity="right">
+            <ImageButton
+                android:src="@android:drawable/ic_media_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/PlayLayout2_Foot_Previous"
+                android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+                android:layout_marginLeft="75.0dp" />
+            <ImageButton
+                android:src="@android:drawable/ic_media_play"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/PlayLayout2_Foot_PlayButton"
+                android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+                android:layout_marginLeft="25.0dp" />
+            <ImageButton
+                android:src="@android:drawable/ic_media_next"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/PlayLayout2_Foot_NextButton"
+                android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+                android:layout_marginLeft="25.0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

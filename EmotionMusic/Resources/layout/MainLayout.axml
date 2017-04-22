@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dp"
+        android:id="@+id/MainLayout_Top"
+        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
+        android:background="@android:color/holo_blue_light">
+        <TextView
+            android:text="EmotionMusic"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="199.3dp"
+            android:layout_height="match_parent"
+            android:id="@+id/MainLayout_TopText"
+            android:textColor="@android:color/background_dark"
+            android:gravity="center" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            android:layout_width="85.7dp"
+            android:layout_height="match_parent"
+            android:id="@+id/MainLayout_TopButton_Lists"
+            android:background="@android:color/holo_blue_light" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_manage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/MainLayout_TopImageButton_Setting"
+            android:background="@android:color/holo_blue_light" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dp"
+        android:id="@+id/MainLayout_Top2">
+        <Button
+            android:text="Recommend"
+            android:layout_width="120.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/MainLayout_RecommendedButton"
+            android:background="#f7f7f7f7"
+            android:textColor="@android:color/darker_gray"
+            android:shadowColor="#ff000000" />
+        <Button
+            android:text="Mine"
+            android:layout_width="120.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/MainLayout_MineButton"
+            android:background="#f7f7f7f7"
+            android:textColor="@android:color/darker_gray" />
+        <Button
+            android:text="Emotion Camera"
+            android:layout_width="120.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/MainLayout_EmoCameraButton"
+            android:background="#f7f7f7f7"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="460.0dp"
+        android:id="@+id/MainLayout_Body"
+        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
+        android:background="#c0ffffff" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/MainLayout_Foot"
+        android:background="#f7f7f7f7"
+        android:layout_gravity="right">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="180.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/MainLayout_Foot_TextLinear"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
+            android:layout_marginLeft="8.0dp">
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="34.0dp"
+                android:id="@+id/MainLayout_Foot_Text1"
+                android:gravity="fill_vertical" />
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="22.3dp"
+                android:id="@+id/MainLayout_Foot_Text2"
+                android:gravity="fill_vertical" />
+        </LinearLayout>
+        <ImageButton
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/MainLayout_Foot_Previous"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <ImageButton
+            android:src="@android:drawable/ic_media_play"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/MainLayout_PlayButton"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <ImageButton
+            android:src="@android:drawable/ic_media_next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/MainLayout_Foot_NextButton"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+    </LinearLayout>
+</LinearLayout>

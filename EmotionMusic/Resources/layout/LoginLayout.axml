@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent">
+    <TextView
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/LoginLayout_Username"
+        p1:digits="@string/Username"
+        p1:inputType="phone"
+        p1:phoneNumber="true"
+        p1:maxLength="11" />
+    <TextView
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/LoginLayout_Password"
+        p1:layout_below="@id/LoginLayout_Username"
+        p1:digits="@string/Password"
+        p1:inputType="textPassword"
+        p1:maxLength="24"
+        p1:password="true" />
+    <Button
+        p1:text="@string/Login"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@id/LoginLayout_Password"
+        p1:id="@+id/LoginLayout_LoginButton" />
+</RelativeLayout>

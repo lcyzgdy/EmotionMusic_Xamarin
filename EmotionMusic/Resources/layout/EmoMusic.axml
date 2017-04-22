@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar"
+    android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/EmoLayout_Background"
+        android:background="@drawable/back2g">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="48.0dp"
+            android:id="@+id/EmoLayout_Top"
+            android:background="@android:color/transparent">
+            <ImageButton
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/EmoLayout_Top_BackButton"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="12.0dp" />
+            <TextView
+                android:text="EmotionMusic"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/EmoLayout_Top_Text"
+                android:textColor="@android:color/background_dark"
+                android:gravity="center"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="271.7dp"
+            android:id="@+id/EmoLayout_Face"
+            android:src="@drawable/mo" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="240.0dp"
+            android:id="@+id/EmoLayout_Body_Text"
+            android:layout_marginRight="38.0dp"
+            android:layout_marginLeft="38.0dp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/EmoLayout_Foot"
+            android:background="@android:color/transparent"
+            android:layout_gravity="right">
+            <ImageButton
+                android:src="@android:drawable/ic_media_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/EmoLayout_Foot_Previous"
+                android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+                android:layout_marginLeft="75.0dp" />
+            <ImageButton
+                android:src="@android:drawable/ic_media_play"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/EmoLayout_Foot_PlayButton"
+                android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+                android:layout_marginLeft="25.0dp" />
+            <ImageButton
+                android:src="@android:drawable/ic_media_next"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/EmoLayout_Foot_NextButton"
+                android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+                android:layout_marginLeft="25.0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
