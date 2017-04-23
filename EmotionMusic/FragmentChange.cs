@@ -20,7 +20,7 @@ namespace EmotionMusic
 
 		public FragmentChange()
 		{
-			fragments = new Fragment[4] { new SettingFragment(), new MainFragment(), new MineFragment(), null };
+			fragments = new Fragment[4] { new SettingFragment(), new MainFragment(), new MineFragment(), new EmoFragment() };
 			//mainFragment = new MainFragment();
 			//mineFragment = new MineFragment();
 			fragmentI = 1;
@@ -35,16 +35,18 @@ namespace EmotionMusic
 		{
 			//var transaction = FragmentManager.BeginTransaction();
 			//transaction.Add(Resource.Id.MainLayout_Body, fragments[fragmentI]);
+			transaction.Add(Resource.Id.MainLayout_Body, fragments[3]);
 			transaction.Add(Resource.Id.MainLayout_Body, fragments[1]);
 			transaction.Add(Resource.Id.MainLayout_Body, fragments[0]);
 			transaction.Add(Resource.Id.MainLayout_Body, fragments[2]);
 			transaction.Commit();
-			//ShowMainFragment();
+			fragmentI = 3;
 		}
 
 		public MainFragment MainFragment { get => fragments[1] as MainFragment; }
 		public MineFragment MineFragment { get => fragments[2] as MineFragment; }
 		public SettingFragment SettingFragment { get => fragments[0] as SettingFragment; }
+		public EmoFragment EmoFragment { get => fragments[3] as EmoFragment; }
 
 		public bool ToRight()
 		{
@@ -65,6 +67,7 @@ namespace EmotionMusic
 			transaction.Hide(fragments[fragmentI]);
 			transaction.Show(fragments[1]);
 			transaction.Commit();
+			fragmentI = 1;
 		}
 
 		public void ShowMineFragment()
@@ -72,6 +75,7 @@ namespace EmotionMusic
 			transaction.Hide(fragments[fragmentI]);
 			transaction.Show(fragments[2]);
 			transaction.Commit();
+			fragmentI = 2;
 		}
 
 		public void ShowSettingFragment()
@@ -79,6 +83,15 @@ namespace EmotionMusic
 			transaction.Hide(fragments[fragmentI]);
 			transaction.Show(fragments[0]);
 			transaction.Commit();
+			fragmentI = 0;
+		}
+
+		public void ShowEmoFragment()
+		{
+			transaction.Hide(fragments[fragmentI]);
+			transaction.Show(fragments[3]);
+			transaction.Commit();
+			fragmentI = 3;
 		}
 	}
 }

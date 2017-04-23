@@ -10,7 +10,7 @@ namespace EmotionMusic
 {
 	public class MainFragment : Fragment
 	{
-		MusicManager musicManager = new MusicManager();
+		MusicManager musicManager;
 
 		public override void OnCreate(Bundle savedInstanceState)
 		{
@@ -26,6 +26,7 @@ namespace EmotionMusic
 		public override void OnStart()
 		{
 			base.OnStart();
+			musicManager = (Activity as MainActivity).CloudMusicManager;
 			if ((Activity as MainActivity).isExit)
 			{
 				GetMyListAsync();
@@ -62,6 +63,7 @@ namespace EmotionMusic
 				Toast.MakeText(Activity, e.Message, ToastLength.Long);
 			}
 			listView.ItemClick += ListViewClick;
+			(Activity as MainActivity).CloudMusicManager = musicManager;
 		}
 
 		private void ListViewClick(object sender, AdapterView.ItemClickEventArgs e)
