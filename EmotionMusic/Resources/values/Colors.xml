@@ -295,4 +295,13 @@
   <color name="whaite_text">#fafafa</color>
   <color name="status_bar">#70000000</color>
   <color name="accent_material_light">@color/themeColor</color>
+  <color name="yellow_a">#c0fff68f</color>
+  <color name="yellow_b">#c0efe67f</color>
+  <color name="blue_lake_a">#0000ff</color>
+  <color name="blue_lake_b">#0000f0</color>
+  <color name="blue_gray_a">#bdcfd9</color>
+  <color name="blue_gray_b">#b0c4de</color>
+  <color name="blue_sky_a">#8db6cd</color>
+  <color name="blue_sky_b">#607b8b</color>
+  <color name="blue_dark_a">#374045</color>
 </resources>

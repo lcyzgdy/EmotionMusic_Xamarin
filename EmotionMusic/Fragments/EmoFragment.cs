@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,10 +13,8 @@ using Android.Widget;
 
 namespace EmotionMusic
 {
-	public class MineFragment : Fragment
+	public class EmoFragment : Fragment
 	{
-		MusicManager musicManager;
-
 		public override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -26,14 +24,8 @@ namespace EmotionMusic
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
-			var v = inflater.Inflate(Resource.Layout.MineFragment, container, false);
-			return v;
-		}
-
-		public override void OnStart()
-		{
-			base.OnStart();
-			musicManager = (Activity as MainActivity).LocalMusicManager;
+			// Use this to return your custom view for this Fragment
+			return inflater.Inflate(Resource.Layout.EmoFragment, container, false);
 		}
 	}
 }

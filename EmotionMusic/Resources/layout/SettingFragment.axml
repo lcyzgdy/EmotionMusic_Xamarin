@@ -23,7 +23,6 @@
             p1:layout_height="60dp"
             p1:layout_width="60dp"
             p1:layout_marginLeft="20dp"
-            p1:layout_marginBottom="0"
             p1:layout_marginTop="10dp"
             p1:layout_alignParentTop="true"
             p1:layout_alignParentStart="true" />

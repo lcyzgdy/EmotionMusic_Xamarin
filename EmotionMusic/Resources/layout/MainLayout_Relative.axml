@@ -9,21 +9,57 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="48.0dp"
+        android:layout_height="64.0dp"
         android:id="@+id/MainLayout_Top"
         android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
-        android:background="@android:color/holo_blue_light"
+        android:background="@color/blue_gray_b"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true">
-        <TextView
-            android:text="@string/ApplicationName"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/MainLayout_TopText"
-            android:textColor="@android:color/background_dark"
-            android:gravity="center"
-            android:layout_weight="1" />
+        android:layout_alignParentLeft="true"
+        android:gravity="center">
+        <RadioGroup
+            android:id="@+id/MainLayout_RadioGroup"
+            android:orientation="horizontal"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:gravity="center">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/MainLayout_RadioButton0"
+                android:button="@null"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/settingbutton" />
+            <RadioButton
+                android:id="@+id/MainLayout_RadioButton1"
+                android:button="@null"
+                android:background="@drawable/recommendbutton"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp" />
+            <RadioButton
+                android:id="@+id/MainLayout_RadioButton2"
+                android:button="@null"
+                android:background="@drawable/minebutton"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/MainLayout_RadioButton3"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/camerabutton"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:checked="true" />
+        </RadioGroup>
     </LinearLayout>
     <RelativeLayout
         android:minWidth="25px"
@@ -81,67 +117,11 @@
             android:maxLines="1"
             android:ellipsize="end" />
     </RelativeLayout>
-    <Toolbar
-        android:minHeight="?android:attr/actionBarSize"
-        android:background="?android:attr/colorPrimary"
-        android:minWidth="25px"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/MainLayout_Toolbar"
-        android:gravity="center"
-        android:layout_below="@id/MainLayout_Top">
-        <RadioGroup
-            android:layout_width="210dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/MainLayout_RadioGroup"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_gravity="center">
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/MainLayout_RadioButton0"
-                android:button="@null"
-                android:layout_weight="1"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/settingbutton" />
-            <RadioButton
-                android:id="@+id/MainLayout_RadioButton1"
-                android:button="@null"
-                android:background="@drawable/recommendbutton"
-                android:checked="true"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp" />
-            <RadioButton
-                android:id="@+id/MainLayout_RadioButton2"
-                android:button="@null"
-                android:background="@drawable/minebutton"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp" />
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/MainLayout_RadioButton3"
-                android:layout_weight="1"
-                android:button="@null"
-                android:background="@drawable/camerabutton"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp" />
-        </RadioGroup>
-    </Toolbar>
     <LinearLayout
         android:minHeight="25px"
         android:minWidth="25px"
         android:id="@+id/MainLayout_Body"
-        android:layout_below="@id/MainLayout_Toolbar"
+        android:layout_below="@id/MainLayout_Top"
         android:layout_above="@id/MainLayout_Foot"
         android:layout_height="match_parent"
         android:layout_width="match_parent"

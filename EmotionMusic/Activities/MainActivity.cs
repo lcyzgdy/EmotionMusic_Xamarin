@@ -18,18 +18,26 @@ namespace EmotionMusic
 	public class MainActivity : Activity
 	{
 		ClientClass client = new ClientClass();
-		MusicManager musicManager = new MusicManager();
+		MusicManager cloudMusicManager = new MusicManager();
+		MusicManager localMusicManager = new MusicManager();
 		FragmentChange fragmentChange;
 		//MainFragment mainFragment = new MainFragment();
 		//MineFragment mineFragment = new MineFragment();
 		bool isPlaying = false;
 		public bool isExit = true;
 
+		internal MusicManager LocalMusicManager { get => localMusicManager; set => localMusicManager = value; }
+		internal MusicManager CloudMusicManager { get => cloudMusicManager; set => cloudMusicManager = value; }
+
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
-			RequestWindowFeature(WindowFeatures.NoTitle);
+			RequestWindowFeature(WindowFeatures.NoTitle);			
 			SetContentView(Resource.Layout.MainLayout_Relative);
+
+			//Window.AddFlags(WindowManagerFlags.TranslucentStatus);
+			//Window.AddFlags(WindowManagerFlags.TranslucentNavigation);
+			Window.AddFlags(WindowManagerFlags.Fullscreen);
 
 			fragmentChange = new FragmentChange();
 			fragmentChange.SetManager(FragmentManager.BeginTransaction());
@@ -73,8 +81,9 @@ namespace EmotionMusic
 					}
 				case Resource.Id.MainLayout_RadioButton3:
 					{
-						OpenCamera();
-						(sender as RadioGroup).Check(Resource.Id.MainLayout_RadioButton1);
+						//OpenCamera();
+						//(sender as RadioGroup).Check(Resource.Id.MainLayout_RadioButton1);
+						fragmentChange.ShowEmoFragment();
 						break;
 					}
 				default: break;

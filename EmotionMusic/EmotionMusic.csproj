@@ -71,6 +71,7 @@
     <Compile Include="Activities\EmoActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="FragmentChange.cs" />
+    <Compile Include="Fragments\EmoFragment.cs" />
     <Compile Include="Fragments\MainFragment.cs" />
     <Compile Include="Fragments\MineFragment.cs" />
     <Compile Include="Fragments\SettingFragment.cs" />
@@ -107,6 +108,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\LoginLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EmoFragment.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -234,10 +238,18 @@
     <AndroidResource Include="Resources\drawable\Button1.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\values\Colors.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ItemAsButton.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\CycleButton.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
