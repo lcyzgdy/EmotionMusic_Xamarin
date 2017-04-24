@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
+    <ImageView
+        android:src="@drawable/onpu"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/RecommendMusic_ImageView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp" />
     <TextView
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
-        android:layout_height="41.3dp"
-        android:id="@+id/textView1"
+        android:layout_height="48dp"
+        android:id="@+id/RecommendMusic_TextView"
         android:textColor="@android:color/background_dark"
-        android:layout_marginLeft="48.0dp"
-        android:gravity="center_vertical" />
-</LinearLayout>
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_toRightOf="@id/RecommendMusic_ImageView"
+        android:layout_marginLeft="16dp" />
+</RelativeLayout>

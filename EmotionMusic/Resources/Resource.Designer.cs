@@ -1101,38 +1101,35 @@ namespace EmotionMusic
 			// aapt resource value: 0x7f080007
 			public const int MainFragment_RecommendMusicListView = 2131230727;
 			
-			// aapt resource value: 0x7f080014
-			public const int MainLayout_Body = 2131230740;
+			// aapt resource value: 0x7f080013
+			public const int MainLayout_Body = 2131230739;
+			
+			// aapt resource value: 0x7f08000d
+			public const int MainLayout_Foot = 2131230733;
 			
 			// aapt resource value: 0x7f08000e
-			public const int MainLayout_Foot = 2131230734;
-			
-			// aapt resource value: 0x7f08000f
-			public const int MainLayout_Foot_NextButton = 2131230735;
-			
-			// aapt resource value: 0x7f080011
-			public const int MainLayout_Foot_Previous = 2131230737;
-			
-			// aapt resource value: 0x7f080012
-			public const int MainLayout_Foot_Text1 = 2131230738;
-			
-			// aapt resource value: 0x7f080013
-			public const int MainLayout_Foot_Text2 = 2131230739;
+			public const int MainLayout_Foot_NextButton = 2131230734;
 			
 			// aapt resource value: 0x7f080010
-			public const int MainLayout_PlayButton = 2131230736;
+			public const int MainLayout_Foot_Previous = 2131230736;
+			
+			// aapt resource value: 0x7f080011
+			public const int MainLayout_Foot_Text1 = 2131230737;
+			
+			// aapt resource value: 0x7f080012
+			public const int MainLayout_Foot_Text2 = 2131230738;
+			
+			// aapt resource value: 0x7f08000f
+			public const int MainLayout_PlayButton = 2131230735;
 			
 			// aapt resource value: 0x7f08000a
 			public const int MainLayout_RadioButton0 = 2131230730;
 			
-			// aapt resource value: 0x7f08000b
-			public const int MainLayout_RadioButton1 = 2131230731;
-			
 			// aapt resource value: 0x7f08000c
-			public const int MainLayout_RadioButton2 = 2131230732;
+			public const int MainLayout_RadioButton1 = 2131230732;
 			
-			// aapt resource value: 0x7f08000d
-			public const int MainLayout_RadioButton3 = 2131230733;
+			// aapt resource value: 0x7f08000b
+			public const int MainLayout_RadioButton3 = 2131230731;
 			
 			// aapt resource value: 0x7f080009
 			public const int MainLayout_RadioGroup = 2131230729;
@@ -1140,83 +1137,56 @@ namespace EmotionMusic
 			// aapt resource value: 0x7f080008
 			public const int MainLayout_Top = 2131230728;
 			
+			// aapt resource value: 0x7f080015
+			public const int MineFragment_MineListView = 2131230741;
+			
 			// aapt resource value: 0x7f080016
-			public const int MineFragment_MineListView = 2131230742;
-			
-			// aapt resource value: 0x7f080028
-			public const int PlayLayout2_Foot = 2131230760;
-			
-			// aapt resource value: 0x7f08002b
-			public const int PlayLayout2_Foot_NextButton = 2131230763;
-			
-			// aapt resource value: 0x7f08002a
-			public const int PlayLayout2_Foot_PlayButton = 2131230762;
-			
-			// aapt resource value: 0x7f080029
-			public const int PlayLayout2_Foot_Previous = 2131230761;
-			
-			// aapt resource value: 0x7f080025
-			public const int PlayLayout2_Image = 2131230757;
-			
-			// aapt resource value: 0x7f080026
-			public const int PlayLayout2_LrcBackground = 2131230758;
-			
-			// aapt resource value: 0x7f080027
-			public const int PlayLayout2_LrcText = 2131230759;
-			
-			// aapt resource value: 0x7f080021
-			public const int PlayLayout2_PlayBackground = 2131230753;
-			
-			// aapt resource value: 0x7f080022
-			public const int PlayLayout2_Top = 2131230754;
-			
-			// aapt resource value: 0x7f080023
-			public const int PlayLayout2_Top_BackButton = 2131230755;
-			
-			// aapt resource value: 0x7f080024
-			public const int PlayLayout2_Top_Text = 2131230756;
-			
-			// aapt resource value: 0x7f080017
-			public const int PlayLayout_Foot = 2131230743;
-			
-			// aapt resource value: 0x7f08001a
-			public const int PlayLayout_Foot_NextButton = 2131230746;
+			public const int PlayLayout_Foot = 2131230742;
 			
 			// aapt resource value: 0x7f080019
-			public const int PlayLayout_Foot_PlayButton = 2131230745;
+			public const int PlayLayout_Foot_NextButton = 2131230745;
 			
 			// aapt resource value: 0x7f080018
-			public const int PlayLayout_Foot_Previous = 2131230744;
+			public const int PlayLayout_Foot_PlayButton = 2131230744;
 			
-			// aapt resource value: 0x7f08001e
-			public const int PlayLayout_LrcBackground = 2131230750;
-			
-			// aapt resource value: 0x7f08001f
-			public const int PlayLayout_LrcText = 2131230751;
+			// aapt resource value: 0x7f080017
+			public const int PlayLayout_Foot_Previous = 2131230743;
 			
 			// aapt resource value: 0x7f08001d
-			public const int PlayLayout_PlayBackground = 2131230749;
+			public const int PlayLayout_LrcBackground = 2131230749;
 			
-			// aapt resource value: 0x7f08001b
-			public const int PlayLayout_Top = 2131230747;
+			// aapt resource value: 0x7f08001e
+			public const int PlayLayout_LrcText = 2131230750;
 			
 			// aapt resource value: 0x7f08001c
-			public const int PlayLayout_Top_BackButton = 2131230748;
+			public const int PlayLayout_PlayBackground = 2131230748;
+			
+			// aapt resource value: 0x7f08001a
+			public const int PlayLayout_Top = 2131230746;
+			
+			// aapt resource value: 0x7f08001b
+			public const int PlayLayout_Top_BackButton = 2131230747;
+			
+			// aapt resource value: 0x7f08001f
+			public const int PlayLayout_Top_Text = 2131230751;
 			
 			// aapt resource value: 0x7f080020
-			public const int PlayLayout_Top_Text = 2131230752;
+			public const int RecommendMusic_ImageView = 2131230752;
 			
-			// aapt resource value: 0x7f080030
-			public const int SettingFragment_LogoutButton = 2131230768;
+			// aapt resource value: 0x7f080021
+			public const int RecommendMusic_TextView = 2131230753;
 			
-			// aapt resource value: 0x7f08002d
-			public const int SettingFragment_UserAccount = 2131230765;
+			// aapt resource value: 0x7f080025
+			public const int SettingFragment_LogoutButton = 2131230757;
 			
-			// aapt resource value: 0x7f08002e
-			public const int SettingFragment_UserImage = 2131230766;
+			// aapt resource value: 0x7f080022
+			public const int SettingFragment_UserAccount = 2131230754;
 			
-			// aapt resource value: 0x7f08002f
-			public const int SettingFragment_Username = 2131230767;
+			// aapt resource value: 0x7f080023
+			public const int SettingFragment_UserImage = 2131230755;
+			
+			// aapt resource value: 0x7f080024
+			public const int SettingFragment_Username = 2131230756;
 			
 			// aapt resource value: 0x7f080000
 			public const int content = 2131230720;
@@ -1224,14 +1194,11 @@ namespace EmotionMusic
 			// aapt resource value: 0x7f080001
 			public const int handle = 2131230721;
 			
-			// aapt resource value: 0x7f080015
-			public const int linearLayout1 = 2131230741;
+			// aapt resource value: 0x7f080014
+			public const int linearLayout1 = 2131230740;
 			
 			// aapt resource value: 0x7f080002
 			public const int slidingDrawer1 = 2131230722;
-			
-			// aapt resource value: 0x7f08002c
-			public const int textView1 = 2131230764;
 			
 			static Id()
 			{
@@ -1271,16 +1238,13 @@ namespace EmotionMusic
 			public const int PlayLayout = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int PlayLayout2 = 2130903048;
+			public const int RecommendMusic = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int RecommendMusic = 2130903049;
+			public const int SettingFragment = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int SettingFragment = 2130903050;
-			
-			// aapt resource value: 0x7f03000b
-			public const int Start = 2130903051;
+			public const int Start = 2130903050;
 			
 			static Layout()
 			{

@@ -20,7 +20,7 @@ namespace EmotionMusic
 
 		public FragmentChange()
 		{
-			fragments = new Fragment[4] { new SettingFragment(), new MainFragment(), new MineFragment(), new EmoFragment() };
+			fragments = new Fragment[3] { new SettingFragment(), new EmoFragment(), new MainFragment()};
 			//mainFragment = new MainFragment();
 			//mineFragment = new MineFragment();
 			fragmentI = 1;
@@ -35,43 +35,62 @@ namespace EmotionMusic
 		{
 			//var transaction = FragmentManager.BeginTransaction();
 			//transaction.Add(Resource.Id.MainLayout_Body, fragments[fragmentI]);
-			transaction.Add(Resource.Id.MainLayout_Body, fragments[3]);
+			//transaction.Add(Resource.Id.MainLayout_Body, fragments[3]);;
+			transaction.SetTransition(FragmentTransit.FragmentFade);
 			transaction.Add(Resource.Id.MainLayout_Body, fragments[1]);
 			transaction.Add(Resource.Id.MainLayout_Body, fragments[0]);
 			transaction.Add(Resource.Id.MainLayout_Body, fragments[2]);
+			transaction.Hide(fragments[0]);
+			transaction.Hide(fragments[1]);
+			transaction.Hide(fragments[2]);
+			transaction.Show(fragments[1]);
 			transaction.Commit();
-			fragmentI = 3;
+			fragmentI = 1;
 		}
 
 		public MainFragment MainFragment { get => fragments[1] as MainFragment; }
-		public MineFragment MineFragment { get => fragments[2] as MineFragment; }
+		//public MineFragment MineFragment { get => fragments[2] as MineFragment; }
 		public SettingFragment SettingFragment { get => fragments[0] as SettingFragment; }
-		public EmoFragment EmoFragment { get => fragments[3] as EmoFragment; }
+		public EmoFragment EmoFragment { get => fragments[2] as EmoFragment; }
 
 		public bool ToRight()
 		{
 			if (fragmentI >= 2) return false;
+			transaction.SetCustomAnimations(Resource.Animation.fragment_slide_right_in, Resource.Animation.fragment_slide_left_out);
+			//transaction.SetTransition(FragmentTransit.FragmentFade);
+			transaction.Hide(fragments[fragmentI]);
 			fragmentI++;
+			transaction.Show(fragments[fragmentI]);
+			transaction.Commit();
 			return true;
 		}
 
 		public bool ToLeft()
 		{
 			if (fragmentI <= 0) return false;
+			transaction.SetCustomAnimations(Resource.Animation.fragment_slide_left_in, Resource.Animation.fragment_slide_right_out);
+			//transaction.SetTransition(FragmentTransit.FragmentFade);
+			transaction.Hide(fragments[fragmentI]);
 			fragmentI--;
+			transaction.Show(fragments[fragmentI]);
+			transaction.Commit();
 			return true;
 		}
 
 		public void ShowMainFragment()
 		{
+			//transaction.SetCustomAnimations(Resource.Animation.fragment_slide_right_in, Resource.Animation.fragment_slide_left_out, Resource.Animation.fragment_slide_left_in, Resource.Animation.fragment_slide_right_out);
+			//transaction.SetTransition(FragmentTransit.FragmentFade);
 			transaction.Hide(fragments[fragmentI]);
-			transaction.Show(fragments[1]);
+			transaction.Show(fragments[2]);
 			transaction.Commit();
-			fragmentI = 1;
+			fragmentI = 2;
 		}
 
 		public void ShowMineFragment()
 		{
+			//transaction.SetCustomAnimations(Resource.Animation.fragment_slide_right_in, Resource.Animation.fragment_slide_left_out, Resource.Animation.fragment_slide_left_in, Resource.Animation.fragment_slide_right_out);
+			//transaction.SetTransition(FragmentTransit.FragmentFade);
 			transaction.Hide(fragments[fragmentI]);
 			transaction.Show(fragments[2]);
 			transaction.Commit();
@@ -80,6 +99,8 @@ namespace EmotionMusic
 
 		public void ShowSettingFragment()
 		{
+			//transaction.SetCustomAnimations(Resource.Animation.fragment_slide_right_in, Resource.Animation.fragment_slide_left_out, Resource.Animation.fragment_slide_left_in, Resource.Animation.fragment_slide_right_out);
+			//transaction.SetTransition(FragmentTransit.FragmentFade);
 			transaction.Hide(fragments[fragmentI]);
 			transaction.Show(fragments[0]);
 			transaction.Commit();
@@ -88,10 +109,12 @@ namespace EmotionMusic
 
 		public void ShowEmoFragment()
 		{
+			//transaction.SetCustomAnimations(Resource.Animation.fragment_slide_right_in, Resource.Animation.fragment_slide_left_out, Resource.Animation.fragment_slide_left_in, Resource.Animation.fragment_slide_right_out);
+			//transaction.SetTransition(FragmentTransit.FragmentFade);
 			transaction.Hide(fragments[fragmentI]);
-			transaction.Show(fragments[3]);
+			transaction.Show(fragments[1]);
 			transaction.Commit();
-			fragmentI = 3;
+			fragmentI = 1;
 		}
 	}
 }

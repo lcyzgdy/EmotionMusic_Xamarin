@@ -25,9 +25,10 @@
             p1:layout_marginLeft="20dp"
             p1:layout_marginTop="10dp"
             p1:layout_alignParentTop="true"
-            p1:layout_alignParentStart="true" />
+            p1:layout_alignParentStart="true"
+            p1:layout_marginBottom="0.0dp" />
         <TextView
-            p1:text="13xxxxxxxxx"
+            p1:text="Administrator"
             p1:textAppearance="?android:attr/textAppearanceMedium"
             p1:layout_width="wrap_content"
             p1:layout_height="wrap_content"

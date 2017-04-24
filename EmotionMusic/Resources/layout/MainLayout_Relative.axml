@@ -19,7 +19,7 @@
         <RadioGroup
             android:id="@+id/MainLayout_RadioGroup"
             android:orientation="horizontal"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="30dp"
             android:gravity="center">
             <RadioButton
@@ -32,24 +32,6 @@
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/settingbutton" />
             <RadioButton
-                android:id="@+id/MainLayout_RadioButton1"
-                android:button="@null"
-                android:background="@drawable/recommendbutton"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp" />
-            <RadioButton
-                android:id="@+id/MainLayout_RadioButton2"
-                android:button="@null"
-                android:background="@drawable/minebutton"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/MainLayout_RadioButton3"
@@ -59,6 +41,15 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:checked="true" />
+            <RadioButton
+                android:id="@+id/MainLayout_RadioButton1"
+                android:button="@null"
+                android:background="@drawable/minebutton"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp" />
         </RadioGroup>
     </LinearLayout>
     <RelativeLayout

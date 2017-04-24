@@ -33,7 +33,7 @@ namespace EmotionMusic
 		public override void OnStart()
 		{
 			base.OnStart();
-			musicManager = (Activity as MainActivity).LocalMusicManager;
+			//musicManager = (Activity as MainActivity).LocalMusicManager;
 		}
 	}
 }

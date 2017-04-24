@@ -43,7 +43,7 @@ namespace EmotionMusic
 				var playButton = FindViewById<ImageButton>(Resource.Id.PlayLayout_Foot_PlayButton);
 				playButton.SetImageResource(Android.Resource.Drawable.IcMediaPause);
 				playButton.Click += PausePlay;
-				
+
 			}
 			catch (Exception e)
 			{
@@ -93,6 +93,10 @@ namespace EmotionMusic
 		private async void UploadAsync(string fileUrl)
 		{
 			Emotion[] allEmos = null;
+
+			string emotion = string.Empty;
+			int ty = -1;
+			TextView text = FindViewById<TextView>(Resource.Id.PlayLayout_LrcText);
 			try
 			{
 				using (System.IO.Stream imageStream = System.IO.File.OpenRead(CameraHelper._file.Path))
@@ -109,28 +113,17 @@ namespace EmotionMusic
 				emos[5] = aEmo.Scores.Neutral;
 				emos[6] = aEmo.Scores.Sadness;
 				emos[7] = aEmo.Scores.Surprise;
-				Dictionary<string, string> musicInfo;
-				string emotion = string.Empty;
-				TextView text = FindViewById<TextView>(Resource.Id.PlayLayout_LrcText);
-				int ty = -1;
-				/*if (emos[5] > .95f)
-				{
-					musicInfo = await client.GetNeutralMusicAsync();
-					ty = 5;
-				}
-				else
-				{
-					emos[5] = -0.5f;
-					ty = -1;
-					for (int i = 0; i < 8; i++)
-					{
-						if (emos.Max().Equals(emos[i]))
-						{
-							ty = i;
-							break;
-						}
-					}
-				}*/
+
+				text.Text = string.Empty;
+				text.Text += "Anger: " + emos[0].ToString() + System.Environment.NewLine;
+				text.Text += "Contempt: " + emos[1].ToString() + System.Environment.NewLine;
+				text.Text += "Disgust: " + emos[2].ToString() + System.Environment.NewLine;
+				text.Text += "Fear: " + emos[3].ToString() + System.Environment.NewLine;
+				text.Text += "Happiness: " + emos[4].ToString() + System.Environment.NewLine;
+				text.Text += "Neutral: " + emos[5].ToString() + System.Environment.NewLine;
+				text.Text += "Sadness: " + emos[6].ToString() + System.Environment.NewLine;
+				text.Text += "Surprise: " + emos[7].ToString();
+
 				for (int i = 0; i < 8; i++)
 				{
 					if (emos.Max().Equals(emos[i]))
@@ -139,66 +132,81 @@ namespace EmotionMusic
 						break;
 					}
 				}
+			}
+			catch (Exception ex)
+			{
+				Toast.MakeText(null, "未检测到人脸，请重试", ToastLength.Long).Show();
+				Finish();
+			}
+			Dictionary<string, string> musicInfo = new Dictionary<string, string>();
+			try
+			{
 				musicInfo = await client.GetMusicAsync(ty);
+				Toast.MakeText(this, musicInfo.Keys.FirstOrDefault(), ToastLength.Long).Show();
+				MusicBoss.CurrentMusicManager.Add(musicInfo);
 				switch (ty)
 				{
-					case 0:
+				case 0:
 					{
 						emotion = "Anger";
 						break;
 					}
-					case 1:
+				case 1:
 					{
 						emotion = "Contempt";
 						break;
 					}
-					case 2:
-					{		
+				case 2:
+					{
 						emotion = "Disgust";
 						break;
-					}			 
-					case 3:
+					}
+				case 3:
 					{
 						emotion = "Fear";
 						break;
 					}
-					case 4:
+				case 4:
 					{
 						emotion = "Happiness";
 						break;
 					}
-					case 5:
+				case 5:
 					{
 						emotion = "Neutral";
 						break;
 					}
-					case 6:
+				case 6:
 					{
 						emotion = "Sadness";
 						break;
 					}
-					case 7:
+				case 7:
 					{
 						emotion = "Surprise";
 						break;
 					}
 				}
-				text.Text = musicInfo["text"];
-				FindViewById<TextView>(Resource.Id.PlayLayout_Top_Text).Text = musicInfo["name"];
-				nameT = musicInfo["name"];
 				Toast.MakeText(this, emotion, ToastLength.Long).Show();
+
+				//FindViewById<TextView>(Resource.Id.PlayLayout_Top_Text).Text = musicInfo["name"];
+
+				FindViewById<TextView>(Resource.Id.PlayLayout_Top_Text).Text = MusicBoss.CurrentMusicManager.GetName();
+				nameT = MusicBoss.CurrentMusicManager.GetName();//.musicInfo["name"];
 				Intent intent = new Intent(this, typeof(PlayService));
 				intent.PutExtra("act", "play");
-				intent.PutExtra("url", musicInfo["url"]);
+				//intent.PutExtra("url", musicInfo["url"]);
+				intent.PutExtra("url", MusicBoss.CurrentMusicManager.GetUrl());
 				StartService(intent);
 				stateNow = "play";
+
 			}
-#pragma warning disable CS0168 // 声明了变量“e”，但从未使用过
 			catch (Exception e)
-#pragma warning restore CS0168 // 声明了变量“e”，但从未使用过
 			{
-				Toast.MakeText(this, "没有检测到人脸，请重试", ToastLength.Long).Show();
-				Finish();
+				Toast.MakeText(this, "获取音乐失败，请检查网络连接后重试", ToastLength.Long).Show();
+				//Toast.MakeText(this, e.Message, ToastLength.Long).Show();
+				//text.Text = e.Message;
+				//Finish();
 			}
 		}
 

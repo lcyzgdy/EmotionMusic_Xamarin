@@ -27,5 +27,18 @@ namespace EmotionMusic
 			// Use this to return your custom view for this Fragment
 			return inflater.Inflate(Resource.Layout.EmoFragment, container, false);
 		}
+
+		public override void OnStart()
+		{
+			base.OnStart();
+			var button = View.FindViewById<Button>(Resource.Id.EmoFragment_Button);
+			button.Click -= EmoFragment_Click;
+			button.Click += EmoFragment_Click;
+		}
+
+		private void EmoFragment_Click(object sender, EventArgs e)
+		{
+			(Activity as MainActivity).OpenCamera();
+		}
 	}
 }

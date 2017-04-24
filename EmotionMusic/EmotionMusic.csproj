@@ -102,7 +102,6 @@
     <AndroidResource Include="Resources\layout\SettingFragment.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\PlayLayout2.axml" />
     <AndroidResource Include="Resources\layout\MainLayout_Relative.axml" />
     <AndroidResource Include="Resources\layout\Drawer.axml">
       <SubType>Designer</SubType>

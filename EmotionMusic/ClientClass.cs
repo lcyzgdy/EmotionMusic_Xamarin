@@ -142,14 +142,15 @@ namespace EmotionMusic
 			Clear();
 			var url = baseUrl + "/?act=2&emotion=" + emotion;
 			var response = await client.GetAsync(url);
+			Toast.MakeText(null, response.StatusCode.ToString(), ToastLength.Long).Show();
 			var result = await response.Content.ReadAsStringAsync();
-			var pairs = result.Split('|');
-			Dictionary<string, string> music = new Dictionary<string, string>
+			var pairs = result.Split(',');
+			Dictionary<string, string> music = new Dictionary<string, string>();
+			foreach (var i in pairs)
 			{
-				{ "name", pairs[0] },
-				{ "url", pairs[1] },
-				{ "text",pairs[2] }
-			};
+				var nameUrl = i.Split('|');
+				music.Add(nameUrl[0], nameUrl[1]);
+			}
 			return music;
 		}
 
